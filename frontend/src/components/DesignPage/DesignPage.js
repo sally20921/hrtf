@@ -6,6 +6,9 @@ import {Tabs, TabContent, TabLink} from 'react-tabs-redux';
 import FontFaceObserver from 'fontfaceobserver';
 import {confirmAlert} from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
+import CircularSlider from 'react-circular-slider-bar';
+import { CircleSlider } from "react-circle-slider";
+import CircularProgressbar from 'react-circular-progressbar';
 
 import MyGroupList from '../GroupPage/MyGroupList';
 import { toSaveDesign, toNewDesign, toResetDesign, toEditDesignName, changeUrl } from '../../actions/index.js';
@@ -830,7 +833,7 @@ class DesignPage extends React.Component {
         let colorPicker;
         let textPicker;
         let logoPicker;
-
+        const percentage = 66
         const popover = {
         position: 'absolute',
         zIndex: '2',
@@ -847,6 +850,17 @@ class DesignPage extends React.Component {
 
         colorPicker = designClickedWhat
         ? <center>
+        <div>
+        <br/>
+        <CircularSlider 
+        value = {0} 
+        onChange = {value => console.log(value)} /> 
+        <br/>
+        <CircleSlider value={0} onChange={value => console.log(value)} />
+          
+        </div>
+
+
         <select className = "select select_32" value={this.state.designClickedWhat}
         id="design_element" onChange={(e)=>this.handleElementChange(e)}>
         <option value = "body">body</option>
@@ -861,6 +875,8 @@ class DesignPage extends React.Component {
         <br/>
         </center>
         : <div />
+
+        
 
 
         textPicker = textClickedWhat
@@ -895,7 +911,7 @@ class DesignPage extends React.Component {
         </select>
         <br/>
         </div>
-
+        
         <div className="section-field">
 
         <span className="title2">Style</span>
