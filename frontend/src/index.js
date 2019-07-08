@@ -8,8 +8,6 @@ import App from './components/App';
 import saga from './store/homepage/new_sagas.js'
 import './css/main_styles.css';
 
-//import './bootstrap/css/bootstrap.css';
-//import './bootstrap/css/bootstrap-theme.css';
 
 const sagaMiddleware = createSagaMiddleware();
 

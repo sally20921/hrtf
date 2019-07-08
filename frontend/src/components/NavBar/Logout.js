@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {signOut, changeUrl} from '../../actions'
+import {signOut} from '../../actions'
 
 class Logout extends React.Component {
     //TODO 커밋 전에는 portnum 8000으로 수정

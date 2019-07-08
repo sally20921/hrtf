@@ -4,11 +4,6 @@ import {changeUrl, } from '../../actions';
 
 class Profile extends React.Component {
     render() {
-        // const onSubmit = () => {
-        //     if (this.username !== undefined && this.password !== undefined) {
-        //         this.props.onClick(this.username.value, this.password.value)
-        //     }
-
         return (
         <a href="#" onClick={() => {this.props.onToProfile(this.props.username); return false;}}>PROFILE</a>
         )
