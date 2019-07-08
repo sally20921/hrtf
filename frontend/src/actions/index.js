@@ -1,5 +1,3 @@
-
-
 export const showNavBar = () => {
   return{
     type: 'NAV_BAR',
@@ -24,16 +22,17 @@ export const authenticate = (auth) => {
         auth
     }
 }
+export const AUTHENTICATE = 'AUTHENTICATE'
 
 // When the user enters username, password and pwdverification and clicks the '회원가입', this action is invocked and Saga requests POST to 'User List' in backend page.
 export const postSignUp = (username, password) => {
-console.log("%%%%");
     return {
         type: 'POST_SIGN_UP',
         username,
         password
     }
 }
+export const POST_SIGN_UP = 'POST_SIGN_UP'
 
 //When the user clicks the 'Sign Out' button, this action is invoked
 export const signOut = () => {
@@ -51,7 +50,7 @@ export const changeUrl = (pathname) => {
         path: pathname,
     }
 }
-
+export const CHANGE_URL = 'CHANGE_URL'
 
 export const setState = (state) => {
     return {
@@ -59,7 +58,7 @@ export const setState = (state) => {
         state: state
     }
 }
-
+export const SET_STATE = 'SET_STATE'
 
 
 export const gotoSignUpPage = () => {
@@ -67,7 +66,7 @@ export const gotoSignUpPage = () => {
         type: 'GOTO_SIGN_UP',
     }
 }
-
+export const GOTO_SIGN_UP = 'GOTO_SIGN_UP'
 
 
 export const toProfile = (profile_user) =>{
@@ -76,6 +75,8 @@ export const toProfile = (profile_user) =>{
         profuser: profile_user,
     }
 }
+export const TO_PROFILE = 'TO_PROFILE'
+
 export const toChangeIntro = (user,name,belong,intro, removeImg, changeImg, img)=>{
     return {
          type: 'TO_INTRO_CHANGE',
@@ -88,6 +89,8 @@ export const toChangeIntro = (user,name,belong,intro, removeImg, changeImg, img)
          img: img
     }
 }
+export const TO_INTRO_CHANGE = 'TO_INTRO_CHANGE'
+
 export const toChangePW = (profile_user, oldpw, newpw) => {
     return {
         type: 'TO_PW_CHANGE',
@@ -96,13 +99,15 @@ export const toChangePW = (profile_user, oldpw, newpw) => {
         newpw : newpw,
     }
 }
+export const TO_PW_CHANGE = 'TO_PW_CHANGE'
+
 export const toEscape = (profile_user) => {
     return {
         type: 'TO_ESCAPE',
         profuser: profile_user,
     }
 }
-
+export const TO_ESCAPE = 'TO_ESCAPE'
 
 export const toGiveAdmin = (groupid, userid) => {
     console.log("giveAdmin action groupid: ", groupid, " userid: ", userid)
@@ -112,4 +117,5 @@ export const toGiveAdmin = (groupid, userid) => {
         userid: userid,
     }
 }
+export const GIVE_ADMIN = 'GIVE_ADMIN'
 
