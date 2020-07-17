@@ -11,7 +11,7 @@
     "jest": "^19.0.2",
     "jest-enzyme": "^7.0.2",
     "jquery": "^3.4.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "react": "^15.5.4",
     "react-circle-slider": "^1.6.2",
     "react-circular-progressbar": "^2.0.1",
